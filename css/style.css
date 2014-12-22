@@ -129,13 +129,11 @@ body {
 	left: 0;
 	height: 90px;
 	background-color: rgba(0,0,0,.8);
-	display: -webkit-box;
-	display: -webkit-flexflex;
-	display: flex;
 	text-align: right;
 }
 
-.toolbar .toolbtn {	
+.toolbar .toolbtn {
+	display: inline-block;
 	width: 90px;
 	height: 90px;
 	background: url(../img/icon-tool.png) 0 0 no-repeat;
