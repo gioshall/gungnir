@@ -152,7 +152,7 @@ body {
 	background-color: rgba(0,0,0,.8);
 }
 
-.toolbar .toolbtn.mute:active {
+.toolbar .toolbtn.mute:hover {
 	height: 180px;
 }
 
@@ -164,7 +164,7 @@ body {
 	background-position: 0 -180px;
 }
 
-.toolbar .toolbtn.fullscreen:active {
+.toolbar .toolbtn.fullscreen:hover {
 	height: 180px;
 }
 
@@ -182,7 +182,7 @@ body {
 	background: url(../img/icon-tool.png) rgba(0,0,0,.8) 0 0 no-repeat;
 }
 
-.toolbar .toolbtn.qos:active {
+.toolbar .toolbtn.qos:hover {
 	height: 270px;
 }
 
