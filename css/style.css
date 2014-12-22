@@ -127,6 +127,28 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 100px;
+	height: 90px;
 	background-color: rgba(0,0,0,.8);
+	display: flex;
+	text-align: right;
+}
+
+.toolbar .toolbtn {	
+	width: 90px;
+	height: 90px;
+	background: url(../img/icon-tool.png) 0 0 no-repeat;
+	opacity: .8;
+}
+
+.toolbar .toolbtn.mute {
+	background-position: 0 -90px;
+}
+
+.toolbar .toolbtn.fullscreen {
+	background-position: 0 -270px;
+}
+
+.toolbar .toolbtn.quit {
+	margin-left: 5px;
+	background-position: 0 0;
 }
