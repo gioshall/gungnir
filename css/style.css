@@ -152,3 +152,8 @@ body {
 	margin-left: 5px;
 	background-position: 0 0;
 }
+
+.toolbar .toolbtn.qos {
+	margin-left: 5px;
+	background-position: 0 -450px;
+}
