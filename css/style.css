@@ -119,3 +119,14 @@ body {
 .dui-button-start.active {
 	background-position: -100px -438px;
 }
+
+/* tool */
+
+.toolbar {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100px;
+	background-color: rgba(0,0,0,.8);
+}
