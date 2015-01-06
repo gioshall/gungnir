@@ -24,12 +24,26 @@
 
 		<!-- tool -->
 		<div class="toolbar">
-			<div class="toolbtn quit"></div>
-			<div class="toolbtn fullscreen"><div class="fullscreen-on"></div><div class="fullscreen-off"></div></div>
-			<div class="toolbtn mute"><div class="mute-on"></div><div class="mute-off"></div></div>
-			<div class="toolbtn qos"><div class="qos-hi"></div><div class="qos-mi"></div><div class="qos-lo"></div></div>			
+			<div class="toolbtn qos qos-hi"><!-- <div class="qos-hi"></div><div class="qos-mi"></div><div class="qos-lo"></div> --></div>
+			<div class="toolbtn info"></div>
+			<div class="toolbtn mute"></div>
+			<div class="toolbtn fullscreen"></div>
+			<div class="toolbtn feedback"></div>
+			<div class="toolbtn quit"></div>			
 		</div>
 		<!-- tool -->
+
+		<!-- message box -->
+		<div class="msg-box">
+			
+		</div>
+		<!-- message box -->
 	</div>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	$('.toolbtn').click(function(){
+		$(this).toggleClass('on')
+	})
+</script>
 </body>
 </html>
