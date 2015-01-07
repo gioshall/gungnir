@@ -128,7 +128,7 @@ body {
 	top: 0;
 	left: 0;
 	height: 240px;
-	background-color: rgba(0,0,0,.8);
+	background-color: rgba(0,0,0,.6);
 	text-align: left;
 	font-size: 0;
 	overflow: hidden;
@@ -201,18 +201,23 @@ body {
 
 .toolbar.show .toolbtn.qos {
 	width: 600px;
+	position: absolute;
 }
 
 .toolbar .toolbtn.qos {
 	overflow: hidden;
 	text-align: left;
 	margin-left: 30px;
-	transition: width .3s ease 0;
-	-webkit-transition: width .3s ease 0;
+	transition: width .4s ease 0;
+	-webkit-transition: width .4s ease 0;
+}
+
+.toolbar.show .toolbtn:nth-of-type(2) {
+	margin-left: 180px;
 }
 
 .toolbar.show .toolbtn:nth-of-type(2),.toolbar.show .toolbtn:nth-of-type(3),.toolbar.show .toolbtn:nth-of-type(4) {
-	width: 0;
+	opacity: 0;
 }
 
 .toolbar.show .toolbtn:nth-of-type(5),.toolbar.show .toolbtn:nth-of-type(6) {
