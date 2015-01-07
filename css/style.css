@@ -129,7 +129,7 @@ body {
 	left: 0;
 	height: 240px;
 	background-color: rgba(0,0,0,.6);
-	text-align: left;
+	text-align: center;
 	font-size: 0;
 	overflow: hidden;
 }
@@ -185,46 +185,36 @@ body {
 	background-position: 0 -1050px;
 }
 
-.toolbar .toolbtn .sub {
+.sub {
 	position: absolute;
-	width: 600px;
+	width: 0px;
 	height: 150px;
 	top: 0;
 	left: 0;
-	font-size: 0;
-	opacity: 0;
-}
-
-.toolbar.show .toolbtn .sub {
-	opacity: 1;
-}
-
-.toolbar.show .toolbtn.qos {
-	width: 600px;
-	position: absolute;
-}
-
-.toolbar .toolbtn.qos {
 	overflow: hidden;
-	text-align: left;
-	margin-left: 30px;
+	font-size: 0;
+	z-index: 5;
 	transition: width .4s ease 0;
 	-webkit-transition: width .4s ease 0;
 }
 
-.toolbar.show .toolbtn:nth-of-type(2) {
-	margin-left: 180px;
+.toolbar.show .sub {
+	width: 600px;
 }
 
-.toolbar.show .toolbtn:nth-of-type(2),.toolbar.show .toolbtn:nth-of-type(3),.toolbar.show .toolbtn:nth-of-type(4) {
+.toolbar.show .toolbtn:nth-of-type(n+2) {
 	opacity: 0;
 }
 
-.toolbar.show .toolbtn:nth-of-type(5),.toolbar.show .toolbtn:nth-of-type(6) {
-	opacity: .2;
+.sub ul {
+	width: 600px;
+	height: 150px;
+	margin: 0;
+	padding: 0;
 }
 
-.toolbar .toolbtn .sub div {
+.sub li {
+	list-style-type: none;
 	display: inline-block;
 	position: relative;
 	width: 150px;
@@ -233,14 +223,71 @@ body {
 	background-size: 150px 2400px;
 }
 
-.toolbar .toolbtn .sub .head {
-	background-position: 0 -1800px;
+.sub .head {
+	background: transparent;
 	opacity: 0;
-	transition: .3s ease 0;
-	-webkit-transition: .3s ease 0;
+	transition: .3s
 }
 
-.toolbar.show .toolbtn .sub .head {
+.sub .head span {
+	margin-top: 42px;
+	margin-left: 39px;
+	position: relative;
+    background: #fff;
+    width: 26px;
+    height: 66px;
+    display: block;
+    transition: .3s
+}
+
+.sub .head span::after {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 66px;
+    top: 0px;
+    background: #fff;
+    left: 26px;
+    transition: .3s
+}
+
+.sub .head span::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 66px;
+    top: 0px;
+    background: #fff;
+    left: 52px;
+    transition: .3s
+}
+
+.toolbar.show .sub .head span {
+    width: 15px;
+    height: 55px;
+    margin-top: 50px;
+    margin-left: 45px;
+    border-radius: 2px;    
+}
+
+.toolbar.show .sub .head span::after {
+    width: 15px;
+    height: 20px;
+    top: 35px;
+    background: #fff;
+    border-radius: 2px;
+    left: 25px;    
+}
+
+.toolbar.show .sub .head span::before {
+    width: 15px;
+    height: 40px;
+    top: 15px;
+    border-radius: 2px;
+    left: 50px;
+}
+
+.toolbar.show .sub .head {
 	background-color: #000;
 	border-radius: 50%;
 	opacity: 1;

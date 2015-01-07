@@ -26,15 +26,17 @@
 		<div class="toolbar">
 			<div class="toolbtn qos qos-hi">
 			<div class="sub">
-				<div class="head"></div>
-				<div class="qos-hi"></div>
-				<div class="qos-mi off"></div>
-				<div class="qos-lo off"></div>
+				<ul>
+				<li class="head"><span></span></li>
+				<li class="qos-hi"></li>
+				<li class="qos-mi off"></li>
+				<li class="qos-lo off"></li>
+				</ul>
 		    </div>
 		    </div>
 			<div class="toolbtn info"></div>
 			<div class="toolbtn mute"></div>
-			<div class="toolbtn fullscreen"></div>
+			<!-- <div class="toolbtn fullscreen"></div> -->
 			<div class="toolbtn feedback"></div>
 			<div class="toolbtn quit"></div>			
 		</div>
@@ -46,13 +48,19 @@
 		</div>
 		<!-- message box -->
 	</div>
-<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="js/jquery-1.10.2.js"></script>
 <script>
 	$('.toolbtn').click(function(){
 		$(this).toggleClass('on')
 	});
 	$('.toolbtn.qos').click(function(){
 		$('.toolbar').toggleClass('show');
+	});
+	$('.sub li:nth-of-type(n+2)').click(function(){
+		$('.sub li').addClass('off');
+		$(this).removeClass('off');
+        var currentQ = $(this).attr('class');
+		$('.toolbtn.qos').attr('class' , 'toolbtn qos ' + currentQ )
 	});
 </script>
 </body>
