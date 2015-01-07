@@ -24,7 +24,14 @@
 
 		<!-- tool -->
 		<div class="toolbar">
-			<div class="toolbtn qos qos-hi"><!-- <div class="qos-hi"></div><div class="qos-mi"></div><div class="qos-lo"></div> --></div>
+			<div class="toolbtn qos qos-hi">
+			<div class="sub">
+				<div class="head"></div>
+				<div class="qos-hi"></div>
+				<div class="qos-mi off"></div>
+				<div class="qos-lo off"></div>
+		    </div>
+		    </div>
 			<div class="toolbtn info"></div>
 			<div class="toolbtn mute"></div>
 			<div class="toolbtn fullscreen"></div>
@@ -43,7 +50,10 @@
 <script>
 	$('.toolbtn').click(function(){
 		$(this).toggleClass('on')
-	})
+	});
+	$('.toolbtn.qos').click(function(){
+		$('.toolbar').toggleClass('show');
+	});
 </script>
 </body>
 </html>

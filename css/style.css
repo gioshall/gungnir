@@ -129,27 +129,20 @@ body {
 	left: 0;
 	height: 240px;
 	background-color: rgba(0,0,0,.8);
-	text-align: right;
+	text-align: center;
+	font-size: 0;
+	overflow: hidden;
 }
 
 .toolbar .toolbtn {
 	display: inline-block;
 	font-size: 0;
 	position: relative;
-	overflow: hidden;
 	margin-top: 45px;
 	width: 150px;
 	height: 150px;
 	background: url(../img/icon-tool.svg) 0 0 no-repeat;
 	background-size: 150px 2400px;
-}
-
-.toolbar .toolbtn div {
-	display: block;
-	width: 90px;
-	height: 90px;
-	background: url(../img/icon-tool.png) 0 0 no-repeat;
-	background-color: rgba(0,0,0,.8);
 }
 
 .toolbar .toolbtn.mute {
@@ -164,6 +157,9 @@ body {
 	background-position: 0 -450px;
 }
 
+.toolbar .toolbtn.fullscreen.on {
+	background-position: 0 -600px;
+}
 
 .toolbar .toolbtn.quit {
 	background-position: 0 -1500px;
@@ -177,16 +173,76 @@ body {
 	background-position: 0 -1200px;
 }
 
-.toolbar .toolbtn.qos.qos-hi {
+.toolbar .toolbtn.qos.qos-hi ,.toolbar .toolbtn .sub .qos-hi {
 	background-position: 0 -750px;
 }
 
-.toolbar .toolbtn.qos.qos-mi {
+.toolbar .toolbtn.qos.qos-mi ,.toolbar .toolbtn .sub .qos-mi {
 	background-position: 0 -900px;
 }
 
-.toolbar .toolbtn.qos.qos-lo {
+.toolbar .toolbtn.qos.qos-lo ,.toolbar .toolbtn .sub .qos-lo {
 	background-position: 0 -1050px;
+}
+
+.toolbar .toolbtn .sub {
+	position: absolute;
+	width: 600px;
+	height: 150px;
+	top: 0;
+	left: 0;
+	font-size: 0;
+	opacity: 0;
+}
+
+.toolbar.show .toolbtn .sub {
+	opacity: 1;
+}
+
+.toolbar.show .toolbtn.qos {
+	width: 600px;
+}
+
+.toolbar .toolbtn.qos {
+	overflow: hidden;
+	text-align: left;
+	transition: width .2s ease 0;
+	-webkit-transition: width .2s ease 0;
+}
+
+.toolbar.show .toolbtn:nth-of-type(2),.toolbar.show .toolbtn:nth-of-type(3),.toolbar.show .toolbtn:nth-of-type(4) {
+	display: none;
+}
+
+.toolbar.show .toolbtn:nth-of-type(5),.toolbar.show .toolbtn:nth-of-type(6) {
+	opacity: .2;
+}
+
+.toolbar .toolbtn .sub div {
+	display: inline-block;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	background: url(../img/icon-tool.svg) 0 0 no-repeat;
+	background-size: 150px 2400px;
+}
+
+.toolbar .toolbtn .sub .head {
+	background-position: 0 -1800px;
+	background-color: #000;
+	border-radius: 50%;
+}
+
+.toolbar .toolbtn .sub .qos-hi.off {
+	background-position: 0 -1950px;
+}
+
+.toolbar .toolbtn .sub .qos-mi.off {
+	background-position: 0 -2100px;
+}
+
+.toolbar .toolbtn .sub .qos-lo.off {
+	background-position: 0 -2250px;
 }
 
 .msg-box {
