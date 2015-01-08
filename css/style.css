@@ -224,9 +224,15 @@ body {
 }
 
 .sub .head {
-	background: transparent;
+	background: #000;
+	border-radius: 50%;
 	opacity: 0;
-	transition: .3s
+	transition: .3s ease 0;
+	-webkit-transition: .3s ease 0;
+}
+
+.toolbar.show .sub .head {
+	opacity: 1;
 }
 
 .sub .head span {
@@ -237,7 +243,8 @@ body {
     width: 26px;
     height: 66px;
     display: block;
-    transition: .3s
+    transition: .3s ease 0;
+	-webkit-transition: .3s ease 0;
 }
 
 .sub .head span::after {
@@ -248,7 +255,8 @@ body {
     top: 0px;
     background: #fff;
     left: 26px;
-    transition: .3s
+    transition: .3s ease 0;
+	-webkit-transition: .3s ease 0;
 }
 
 .sub .head span::before {
@@ -259,7 +267,8 @@ body {
     top: 0px;
     background: #fff;
     left: 52px;
-    transition: .3s
+    transition: .3s ease 0;
+	-webkit-transition: .3s ease 0;
 }
 
 .toolbar.show .sub .head span {
@@ -285,12 +294,6 @@ body {
     top: 15px;
     border-radius: 2px;
     left: 50px;
-}
-
-.toolbar.show .sub .head {
-	background-color: #000;
-	border-radius: 50%;
-	opacity: 1;
 }
 
 .toolbar .toolbtn .sub .qos-hi.off {
