@@ -15,7 +15,7 @@
 		background-color: #cc0000;
 	}
 </style>
-<div class="clip-svg">
+<!-- <div class="clip-svg">
 </div>
 <svg version="1.1"
      xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1280px" height="720px" viewBox="0 0 1280 720" enable-background="new 0 0 1280 720" xml:space="preserve">
@@ -38,6 +38,22 @@
 			C925.64,653.646,680.435,405.545,668.052,391.504z" clip-rule="evenodd"/>
 		</clipPath>
 	</g>
+</svg> -->
+
+<svg width="120" height="120"
+     viewPort="0 0 120 120" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+        <clipPath id="myClip">
+            <circle cx="30" cy="30" r="20"/>
+            <circle cx="70" cy="70" r="20"/>
+        </clipPath>
+    </defs>
+    
+    <rect x="10" y="10" width="100" height="100"
+          clip-path="url(#myClip)"/>
+    
 </svg>
 </body>
 </html>
