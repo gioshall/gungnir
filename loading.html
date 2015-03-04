@@ -2,15 +2,155 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Gungnir</title>
-	<link rel="stylesheet" href="css/style.css" class="css">
+	<title>SVG</title>
 </head>
+<style>
+	body {
+		background: #000;
+		margin: 0;
+		padding: 0;
+	}
+	.view {
+		width: 1280px;
+		height: 720px;
+		position: relative;
+		margin: auto;
+		background: -webkit-gradient(radial, center center, 0px, center center, 70%, color-stop(1%,#0b5b79), color-stop(70%,#000000));
+		background: -webkit-radial-gradient(center, ellipse cover,  #0b5b79 1%,#000000 70%);
+		-webkit-animation: lhbg 2.8s ease-in 0s infinite;
+		animation: lhbg 2.8s ease-in 0s infinite;
+	}
+
+	@keyframes lhbg {
+		0%{opacity: 0.4;}
+		45%{opacity: 0.9}
+		100%{opacity: 0.4;}
+	}
+
+	@-webkit-keyframes lhbg {
+		0%{opacity: 0.4;}
+		45%{opacity: 0.9}
+		100%{opacity: 0.4;}
+	}
+
+	.view .bg-logo {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	.clip-svg {
+		-webkit-clip-path: url(#mask);
+		clip-path: url(#mask);
+		display: block;
+		width: 1280px;
+		height: 720px;
+		overflow: hidden;
+		position: absolute;
+	}
+
+	.clip-svg .ray01 {
+		position: absolute;
+		width: 1280px;
+		height: 50%;
+		overflow: hidden;
+	}
+
+	.clip-svg .ray02 {
+		position: absolute;
+		width: 1280px;
+		top: 50%;
+		height: 50%;
+		overflow: hidden;
+	}
+
+	.clip-svg span {
+		position: absolute;
+		width: 800px;
+		height: 800px;
+		background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.6) 0%, rgba(0,0,0,0) 80%);
+		background: radial-gradient(ellipse at center,  rgba(255,255,255,0.6) 0%,rgba(0,0,0,0) 80%);
+	}
+
+	.clip-svg .ray01 span {
+		left: -1000px;
+		top: -50px;
+		-webkit-animation: aniray01 2.3s ease-in 0s infinite;
+		animation: aniray01 2.3s ease-in 0s 1 infinite;
+	}
+
+	.clip-svg .ray02 span {
+		width: 500px;
+		height: 500px;
+		left: inherit;
+		top: -200px;
+		right: -1000%;
+		-webkit-animation: aniray02 2.3s ease-in 0s infinite;
+		animation: aniray02 2.3s ease-in 0s 1 infinite;
+	}
+
+
+	@keyframes aniray01 {
+		0%{left: -1000px;}
+		60%{left: 500px;}
+		90%{left: 1500px;}
+		100%{left: 1500px;}
+	}
+
+	@-webkit-keyframes aniray01 {
+		0%{left: -1000px;}
+		60%{left: 500px;}
+		90%{left: 1500px;}
+		100%{left: 1500px;}
+	}
+
+	@keyframes aniray02 {
+		0%{right: -700px;}
+		15%{right: -700px;}
+		80%{right: 500px;}
+		100%{right: 800px;}
+	}
+
+	@-webkit-keyframes aniray02 {
+		0%{right: -700px;}
+		15%{right: -700px;}
+		80%{right: 500px;}
+		100%{right: 800px;}
+	}
+</style>
 <body>
-	<!-- <iframe src="https://www.youtube.com/embed/bldSsQHqnJI?autoplay=1&controls=0" frameborder="0" allowfullscreen class="trailer"></iframe> -->
-  <div class="launch-screen">
-  	<div class="launch-wrap">
-  		<!-- <h2>launching</h2> -->
-  	</div>
-  </div>	
+	
+	<div class="view">
+	<img src="img/launching-bg.png" class="bg-logo">
+	<div class="clip-svg">
+		<div class="ray01"><span></span></div>
+		<div class="ray02"><span></span></div>
+	</div>
+
+	<svg x="0px" y="0px"
+	 width="1280px" height="720px" viewBox="0 0 1280 720" enable-background="new 0 0 1280 720" xml:space="preserve">
+	 
+<g>
+	<clipPath id="mask">
+	<path d="M1061.798,7.578L1061.798,7.578c0-0.002-0.001-0.006-0.001-0.008
+		c-0.005-0.065-0.509-5.143-0.881-7.57h-2.027c0.398,2.529,0.707,5.208,0.906,7.653c0.709,8.791,1.396,17.871-7.354,25.527
+		L669.711,325.84c-14.723,11.244-23.5,11.244-34.612,11.244c-11.12,0-13.436,0-28.149-11.238L230.72,33.223
+		c-9.74-8.518-14.399-17.067-13.852-25.408c0,0,0.429-5.509,1.271-7.814h-2.122c-0.854,2.477-1.18,8.398-1.18,8.398
+		c-0.295,8.764,4.604,17.618,14.611,26.367L605.726,327.43c15.262,11.654,17.971,11.654,29.372,11.654
+		c11.489,0,20.565,0,35.827-11.656l382.779-292.699C1063.233,26.398,1062.508,16.415,1061.798,7.578z"/>
+	<path d="M358.285,690.271c-7.414-6.466-11.41-13.452-10.963-19.175
+		c0.354-4.542,3.963-9.737,11.026-15.886l0.063-0.056l0.059-0.06l260.154-267.607c5.156-4.462,11.842-7.268,17.475-7.329
+		c5.364,0.06,17.654,2.558,23.211,7.337L925.198,655.11l0.051,0.052l0.055,0.049c4.438,3.859,4.783,8.703,5.185,14.313
+		c0.038,0.523,0.074,1.048,0.115,1.573c0.563,7.188,0.584,14.063-5.229,19.169L883.748,720h3.441l39.426-28.164
+		c6.596-5.732,6.565-13.397,5.981-20.896c-0.491-6.273-0.463-12.438-5.981-17.238l-265.94-267.668
+		c-5.986-5.209-18.927-7.816-24.576-7.874c-5.649,0.058-12.862,2.665-18.85,7.874L357.037,653.701
+		c-5.519,4.802-11.219,10.965-11.709,17.238c-0.584,7.498,5.114,15.163,11.709,20.896L395.615,720h3.391L358.285,690.271z"/>
+	</clipPath>
+</g>
+</svg>
+
+</div>
 </body>
 </html>
