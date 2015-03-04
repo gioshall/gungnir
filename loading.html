@@ -9,10 +9,12 @@
 		background: #000;
 		margin: 0;
 		padding: 0;
+		overflow: hidden;
 	}
 	.view {
 		width: 1280px;
 		height: 720px;
+		overflow: hidden;
 		position: relative;
 		margin: auto;
 		background: -webkit-gradient(radial, center center, 0px, center center, 70%, color-stop(1%,#0b5b79), color-stop(70%,#000000));
@@ -119,16 +121,21 @@
 		80%{right: 500px;}
 		100%{right: 800px;}
 	}
+
+	@media screen and (max-width: 1280px) {
+		.view {
+			left: 50%;
+			margin-left: -640px;
+		}
+	}
 </style>
 <body>
-	
-	<div class="view">
+<div class="view">
 	<img src="img/launching-bg.png" class="bg-logo">
-	<div class="clip-svg">
-		<div class="ray01"><span></span></div>
-		<div class="ray02"><span></span></div>
-	</div>
-
+<div class="clip-svg">
+	<div class="ray01"><span></span></div>
+	<div class="ray02"><span></span></div>
+</div>
 <svg>
 <g>
 	<clipPath id="mask">
