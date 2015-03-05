@@ -34,15 +34,15 @@
 	}
 
 	@keyframes lhbg {
-		0%{opacity: 0.4;}
+		0%{opacity: 0.6;}
 		45%{opacity: 1}
-		100%{opacity: 0.4;}
+		100%{opacity: 0.6;}
 	}
 
 	@-webkit-keyframes lhbg {
-		0%{opacity: 0.4;}
+		0%{opacity: 0.6;}
 		45%{opacity: 1}
-		100%{opacity: 0.4;}
+		100%{opacity: 0.6;}
 	}
 
 	.view .bg-logo {
@@ -132,10 +132,83 @@
 		100%{right: 800px;}
 	}
 
+	.loading-msg {
+		position: absolute;
+		bottom: 10px;
+		right: 20px;
+		color: #fff;
+		font-family: helvetica, "LiHei Pro", "Heiti TC", "微軟正黑體";
+		line-height: 35px;
+		font-size: 19px;
+		letter-spacing: 1px;
+		font-weight: normal;
+		-webkit-animation: loading-text 1s linear infinite;
+		animation: loading-text 1s linear infinite;
+	}
+
+	.loading-msg::before {
+		width: 35px;
+		height: 35px;
+		background: url(img/loading-icon.png) 0 0 no-repeat;
+		background-size: 100%;
+		content: '';
+		display: block;
+		float: left;
+		margin-right: 10px;
+		-webkit-animation: loading-spin 0.8s linear infinite;
+		animation: loading-spin 0.8s linear infinite;
+	}
+
+	@-webkit-keyframes loading-text {
+    	0%{text-shadow: 0 0 0 #0d9bd1;opacity: .8;}
+    	60%{text-shadow: 0 0 3px #0d9bd1;opacity: 1;}
+    	80%{text-shadow: 0 0 3px #0d9bd1;opacity: 1;}
+    	100%{text-shadow: 0 0 0 #0d9bd1;opacity: .8;}
+	}
+
+	keyframes loading-text {
+    	0%{text-shadow: 0 0 0 #0d9bd1;opacity: .8;}
+    	60%{text-shadow: 0 0 3px #0d9bd1;opacity: 1;}
+    	80%{text-shadow: 0 0 3px #0d9bd1;opacity: 1;}
+    	100%{text-shadow: 0 0 0 #0d9bd1;opacity: .8;}
+	}
+
+
+	@-webkit-keyframes loading-spin {
+    	from{
+        	-webkit-transform: rotate(0deg);
+    	}
+    	to{
+        	-webkit-transform: rotate(360deg);
+    	}
+	}
+
+	keyframes loading-spin {
+    	from{
+        	-webkit-transform: rotate(0deg);
+    	}
+    	to{
+        	-webkit-transform: rotate(360deg);
+    	}
+	}
+
 	@media screen and (max-width: 1280px) {
 		.view {
 			left: 50%;
 			margin-left: -640px;
+		}
+	}
+
+	@media screen and (max-width: 568px) {
+		.view {
+			top: -200px;
+			-webkit-transform: scale(0.5);
+    		transform: scale(0.5);
+		}
+	}
+	@media screen and (max-width: 320px) {
+		.view {
+			top: -100px;
 		}
 	}
 </style>
@@ -168,6 +241,9 @@
 </g>
 </svg>
 
+</div>
+<div class="loading-msg">
+	loading
 </div>
 </div>
 </body>
