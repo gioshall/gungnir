@@ -12,6 +12,10 @@
 		padding: 0;
 	}
 
+	::selection {
+		background-color: rgba(0,0,0,0.5);
+	}
+
 	.loaing-wrap {
 		position: absolute;
 		width: 100%;
@@ -27,6 +31,19 @@
 		overflow: hidden;
 		position: relative;
 		margin: auto;
+		/*background: -webkit-gradient(radial, center center, 0px, center center, 70%, color-stop(1%,#0b5b79), color-stop(70%,#000000));
+		background: -webkit-radial-gradient(center, ellipse cover,  #0b5b79 1%,#000000 70%);
+		-webkit-animation: lhbg 2.8s ease-in 0s infinite;
+		animation: lhbg 2.8s ease-in 0s infinite;*/
+	}
+
+	.view::after {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: '';
 		background: -webkit-gradient(radial, center center, 0px, center center, 70%, color-stop(1%,#0b5b79), color-stop(70%,#000000));
 		background: -webkit-radial-gradient(center, ellipse cover,  #0b5b79 1%,#000000 70%);
 		-webkit-animation: lhbg 2.8s ease-in 0s infinite;
@@ -34,15 +51,15 @@
 	}
 
 	@keyframes lhbg {
-		0%{opacity: 0.7;}
+		0%{opacity: 0.6;}
 		45%{opacity: 1}
-		100%{opacity: 0.7;}
+		100%{opacity: 0.6;}
 	}
 
 	@-webkit-keyframes lhbg {
-		0%{opacity: 0.7;}
+		0%{opacity: 0.6;}
 		45%{opacity: 1}
-		100%{opacity: 0.7;}
+		100%{opacity: 0.6;}
 	}
 
 	.view .bg-logo {
@@ -51,6 +68,7 @@
 		height: 100%;
 		top: 0;
 		left: 0;
+		z-index: 1;
 	}
 
 	.clip-svg {
@@ -61,6 +79,7 @@
 		height: 720px;
 		overflow: hidden;
 		position: absolute;
+		z-index: 2;
 	}
 
 	.clip-svg .ray01 {
@@ -82,8 +101,8 @@
 		position: absolute;
 		width: 800px;
 		height: 800px;
-		background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.9) 0%, rgba(0,0,0,0) 80%);
-		background: radial-gradient(ellipse at center,  rgba(255,255,255,0.9) 0%,rgba(0,0,0,0) 80%);
+		background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.9) 0%, rgba(0,0,0,0) 70%);
+		background: radial-gradient(ellipse at center,  rgba(255,255,255,0.9) 0%,rgba(0,0,0,0) 70%);
 	}
 
 	.clip-svg .ray01 span {
@@ -94,10 +113,10 @@
 	}
 
 	.clip-svg .ray02 span {
-		width: 500px;
-		height: 500px;
+		width: 450px;
+		height: 450px;
 		left: inherit;
-		top: -200px;
+		top: -100px;
 		right: -1000%;
 		-webkit-animation: aniray02 2.3s ease-in 0s infinite;
 		animation: aniray02 2.3s ease-in 0s 1 infinite;
@@ -191,6 +210,28 @@
         	-webkit-transform: rotate(360deg);
     	}
 	}
+
+/* error */
+
+	.loaing-wrap.error .view::after {
+		opacity: .7;
+		-webkit-animation: none;
+		animation: none;
+	}
+
+	.loaing-wrap.error .clip-svg {
+		display: none;
+	}
+
+	.loaing-wrap.error .loading-msg {
+		-webkit-animation: none;
+		animation: none;
+	}
+	.loaing-wrap.error .loading-msg::before {
+		display: none;
+	}
+
+
 
 	@media screen and (max-width: 1280px) {
 		.view {
