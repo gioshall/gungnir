@@ -46,6 +46,7 @@
 		content: '';
 		background: -webkit-gradient(radial, center center, 0px, center center, 70%, color-stop(1%,#0b5b79), color-stop(70%,#000000));
 		background: -webkit-radial-gradient(center, ellipse cover,  #0b5b79 1%,#000000 70%);
+		background: radial-gradient(ellipse at center,  #0b5b79 1%,#000000 70%);
 		-webkit-animation: lhbg 2.8s ease-in 0s infinite;
 		-moz-animation: lhbg 2.8s ease-in 0s infinite;
 		animation: lhbg 2.8s ease-in 0s infinite;
@@ -218,7 +219,7 @@
     	100%{text-shadow: 0 0 0 #0d9bd1;opacity: .8;}
 	}
 
-	keyframes loading-text {
+	@keyframes loading-text {
     	0%{text-shadow: 0 0 0 #0d9bd1;opacity: .8;}
     	60%{text-shadow: 0 0 3px #0d9bd1;opacity: 1;}
     	80%{text-shadow: 0 0 3px #0d9bd1;opacity: 1;}
@@ -227,30 +228,18 @@
 
 
 	@-webkit-keyframes loading-spin {
-    	from{
-        	-webkit-transform: rotate(0deg);
-    	}
-    	to{
-        	-webkit-transform: rotate(360deg);
-    	}
+    	from{-webkit-transform: rotate(0deg);}
+    	to{-webkit-transform: rotate(360deg);}
 	}
 
 	@-moz-keyframes loading-spin {
-    	from{
-        	transform: rotate(0deg);
-    	}
-    	to{
-        	transform: rotate(360deg);
-    	}
+    	from{transform: rotate(0deg);}
+    	to{transform: rotate(360deg);}
 	}
 
-	keyframes loading-spin {
-    	from{
-        	-webkit-transform: rotate(0deg);
-    	}
-    	to{
-        	-webkit-transform: rotate(360deg);
-    	}
+	@keyframes loading-spin {
+    	from{-webkit-transform: rotate(0deg);}
+    	to{-webkit-transform: rotate(360deg);}
 	}
 
 /* error */
