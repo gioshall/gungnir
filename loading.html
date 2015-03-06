@@ -47,10 +47,17 @@
 		background: -webkit-gradient(radial, center center, 0px, center center, 70%, color-stop(1%,#0b5b79), color-stop(70%,#000000));
 		background: -webkit-radial-gradient(center, ellipse cover,  #0b5b79 1%,#000000 70%);
 		-webkit-animation: lhbg 2.8s ease-in 0s infinite;
+		-moz-animation: lhbg 2.8s ease-in 0s infinite;
 		animation: lhbg 2.8s ease-in 0s infinite;
 	}
 
 	@keyframes lhbg {
+		0%{opacity: 0.6;}
+		45%{opacity: 1}
+		100%{opacity: 0.6;}
+	}
+
+	@-moz-keyframes lhbg {
 		0%{opacity: 0.6;}
 		45%{opacity: 1}
 		100%{opacity: 0.6;}
@@ -109,6 +116,7 @@
 		left: -1000px;
 		top: -50px;
 		-webkit-animation: aniray01 2.3s ease-in 0s infinite;
+		-moz-animation: aniray01 2.3s ease-in 0s infinite;
 		animation: aniray01 2.3s ease-in 0s 1 infinite;
 	}
 
@@ -119,6 +127,7 @@
 		top: -100px;
 		right: -1000%;
 		-webkit-animation: aniray02 2.3s ease-in 0s infinite;
+		-moz-animation: aniray02 2.3s ease-in 0s infinite;
 		animation: aniray02 2.3s ease-in 0s 1 infinite;
 	}
 
@@ -137,6 +146,14 @@
 		100%{left: 1500px;}
 	}
 
+	@-moz-keyframes aniray01 {
+		0%{left: -1000px;}
+		60%{left: 500px;}
+		90%{left: 1500px;}
+		100%{left: 1500px;}
+	}
+
+
 	@keyframes aniray02 {
 		0%{right: -700px;}
 		15%{right: -700px;}
@@ -145,6 +162,13 @@
 	}
 
 	@-webkit-keyframes aniray02 {
+		0%{right: -700px;}
+		15%{right: -700px;}
+		80%{right: 500px;}
+		100%{right: 800px;}
+	}
+
+	@-moz-keyframes aniray02 {
 		0%{right: -700px;}
 		15%{right: -700px;}
 		80%{right: 500px;}
@@ -162,6 +186,7 @@
 		letter-spacing: 1px;
 		font-weight: normal;
 		-webkit-animation: loading-text 1s linear infinite;
+		-moz-animation: loading-text 1s linear infinite;
 		animation: loading-text 1s linear infinite;
 	}
 
@@ -175,10 +200,18 @@
 		float: left;
 		margin-right: 10px;
 		-webkit-animation: loading-spin 0.8s linear infinite;
+		-moz-animation: loading-spin 0.8s linear infinite;
 		animation: loading-spin 0.8s linear infinite;
 	}
 
 	@-webkit-keyframes loading-text {
+    	0%{text-shadow: 0 0 0 #0d9bd1;opacity: .8;}
+    	60%{text-shadow: 0 0 3px #0d9bd1;opacity: 1;}
+    	80%{text-shadow: 0 0 3px #0d9bd1;opacity: 1;}
+    	100%{text-shadow: 0 0 0 #0d9bd1;opacity: .8;}
+	}
+
+	@-moz-keyframes loading-text {
     	0%{text-shadow: 0 0 0 #0d9bd1;opacity: .8;}
     	60%{text-shadow: 0 0 3px #0d9bd1;opacity: 1;}
     	80%{text-shadow: 0 0 3px #0d9bd1;opacity: 1;}
@@ -199,6 +232,15 @@
     	}
     	to{
         	-webkit-transform: rotate(360deg);
+    	}
+	}
+
+	@-moz-keyframes loading-spin {
+    	from{
+        	transform: rotate(0deg);
+    	}
+    	to{
+        	transform: rotate(360deg);
     	}
 	}
 
