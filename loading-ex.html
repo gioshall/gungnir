@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=960; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	<title>project gungnir</title>
 	<!-- <link rel="stylesheet" href="style.css"> -->
 </head>
@@ -81,8 +81,8 @@
 	}
 
 	.clip-svg {
-		-webkit-clip-path: url(#mask);
-		clip-path: url(#mask);
+		-webkit-clip-path: url(mask.svg#mask);
+		clip-path: url(mask.svg#mask);
 		display: block;
 		width: 1280px;
 		height: 720px;
@@ -302,7 +302,8 @@
 	<div class="ray01"><span></span></div>
 	<div class="ray02"><span></span></div>
 </div>
-<svg>
+<img src="mask.svg">
+<!-- <svg>
 <g>
 	<clipPath id="mask">
 	<path d="M1063.533-0.23l-1.947,0.46c5.469,23.151-6.479,31.924-7.021,32.309
@@ -321,7 +322,7 @@
 			"/>
 	</clipPath>
 </g>
-</svg>
+</svg> -->
 
 </div>
 <div class="loading-msg">
