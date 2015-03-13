@@ -78,10 +78,11 @@
 		height: 720px;
 		overflow: hidden;
 		position: absolute;
-		display: none;
 	}
 
 	.clip-bg::after {
+		-webkit-clip-path: url(#mask);
+		clip-path: url(#mask);
 		display: block;
 		width: 1280px;
 		height: 720px;
