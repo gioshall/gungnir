@@ -70,9 +70,9 @@
 	}
 
 	.clip-bg {
-		-webkit-clip-path: url(#mask);
+		/*-webkit-clip-path: url(#mask);
 		clip-path: url(#mask);
-		background-color: #000;
+		background-color: #000;*/
 		display: block;
 		width: 1280px;
 		height: 720px;
@@ -81,6 +81,8 @@
 	}
 
 	.clip-bg::after {
+		-webkit-clip-path: url(#mask);
+		clip-path: url(#mask);
 		display: block;
 		width: 1280px;
 		height: 720px;
@@ -104,17 +106,16 @@
 		height: 720px;
 		overflow: hidden;
 		position: absolute;
-		background-color: #fff;
 	}
 
-	.clip-svg .ray01 {
+	.rayblk .ray01 {
 		position: absolute;
 		width: 1280px;
 		height: 50%;
 		overflow: hidden;
 	}
 
-	.clip-svg .ray02 {
+	.rayblk .ray02 {
 		position: absolute;
 		width: 1280px;
 		top: 50%;
@@ -122,13 +123,13 @@
 		overflow: hidden;
 	}
 
-.clip-svg span {
+.rayblk span {
   position: absolute;
   background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.3) 50%,rgba(255,255,255,0) 70%);
   background: radial-gradient(ellipse at center, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.3) 50%,rgba(255,255,255,0) 70%);
 }
 
-.clip-svg .ray01 span {
+.rayblk .ray01 span {
   width: 580px;
   height: 830px;
   top:0;
@@ -136,7 +137,7 @@
   animation: aniray01 3300ms linear 300ms 1 infinite;
 }
 
-.clip-svg .ray02 span {
+.rayblk .ray02 span {
   width: 400px;
   height: 770px;
   top: -430px;
@@ -266,7 +267,7 @@
 		z-index: 1;
 	}
 
-	.loaing-wrap.error .clip-svg {
+	.loaing-wrap.error .rayblk {
 		display: none;
 	}
 
@@ -306,8 +307,8 @@
 <div class="loaing-wrap">
 <div class="view">
 	<div class="rayblk">
-	<!-- <div class="ray01"><span></span></div>
-	<div class="ray02"><span></span></div> -->
+	<div class="ray01"><span></span></div>
+	<div class="ray02"><span></span></div>
 	</div>
 	<div class="error-bg"></div>
 
