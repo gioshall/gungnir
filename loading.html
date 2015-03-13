@@ -116,8 +116,7 @@
   width: 580px;
   height: 830px;
   top:0;
-  transform: translateZ(1000px);
-  transform-style: preserve-3d;
+  transform: translate3d(0px, 0px, 0px);
   -webkit-animation: aniray01 3300ms linear 300ms infinite;
   animation: aniray01 3300ms linear 300ms 1 infinite;
 }
@@ -126,51 +125,50 @@
   width: 400px;
   height: 770px;
   top: -430px;
-  transform: translateZ(1000px);
-  transform-style: preserve-3d;
+  transform: translate3d(0px, 0px, 0px);
   -webkit-animation: aniray02 3300ms linear 300ms infinite; 
   animation: aniray02 3300ms linear 300ms 1 infinite;
 }
 
 
 @keyframes aniray01 {
-  0%{transform: translateX(-370px);}
-  50%{transform: translateX(1075px);}
-  100%{transform: translateX(1075px);}
+  0%{transform: translate3d(-370px, 0px, 0px);}
+  50%{transform: translate3d(1075px, 0px, 0px);}
+  100%{transform: translate3d(1075px, 0px, 0px);}
 }
 
 @-webkit-keyframes aniray01 {
-  0%{-webkit-transform: translateX(-370px);}
-  50%{-webkit-transform: translateX(1075px);}
-  100%{-webkit-transform: translateX(1075px);}
+  0%{-webkit-transform: translate3d(-370px, 0px, 0px);}
+  50%{-webkit-transform: translate3d(1075px, 0px, 0px);}
+  100%{-webkit-transform: translate3d(1075px, 0px, 0px);}
 }
 
 @-moz-keyframes aniray01 {
-  0%{transform: translateX(-370px);}
-  50%{transform: translateX(1075px);}
-  100%{transform: translateX(1075px);}
+  0%{transform: translate3d(-370px, 0px, 0px);}
+  50%{transform: translate3d(1075px, 0px, 0px);}
+  100%{transform: translate3d(1075px, 0px, 0px);}
 }
 
 
 @keyframes aniray02 {
-  0%{transform: translateX(940px);}
-  25%{transform: translateX(940px);}
-  60%{transform: translateX(-60px);}
-  100%{transform: translateX(-60px);}
+  0%{transform: translate3d(940px, 0px, 0px);}
+  25%{transform: translate3d(940px, 0px, 0px);}
+  60%{transform: translate3d(-60px, 0px, 0px);}
+  100%{transform: translate3d(-60px, 0px, 0px);}
 }
 
 @-webkit-keyframes aniray02 {
-  0%{-webkit-transform: translateX(940px);}
-  25%{-webkit-transform: translateX(940px);}
-  60%{-webkit-transform: translateX(-60px);}
-  100%{-webkit-transform: translateX(-60px);}
+  0%{-webkit-transform: translate3d(940px, 0px, 0px);}
+  25%{-webkit-transform: translate3d(940px, 0px, 0px);}
+  60%{-webkit-transform: translate3d(-60px, 0px, 0px);}
+  100%{-webkit-transform: translate3d(-60px, 0px, 0px);}
 }
 
 @-moz-keyframes aniray02 {
-  0%{transform: translateX(940px);}
-  25%{transform: translateX(940px);}
-  60%{transform: translateX(-60px);}
-  100%{transform: translateX(-60px);}
+  0%{transform: translate3d(940px, 0px, 0px);}
+  25%{transform: translate3d(940px, 0px, 0px);}
+  60%{transform: translate3d(-60px, 0px, 0px);}
+  100%{transform: translate3d(-60px, 0px, 0px);}
 }
 
 
@@ -299,7 +297,7 @@
 	<div class="ray01"><span></span></div>
 	<div class="ray02"><span></span></div>
 </div>
-<svg>
+<svg style="transform: translate3d(0px, 0px, 0px);">
 <g>
 	<clipPath id="mask">
 	<path d="M1063.533-0.23l-1.947,0.46c5.469,23.151-6.479,31.924-7.021,32.309
