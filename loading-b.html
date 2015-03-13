@@ -70,9 +70,7 @@
 	}
 
 	.clip-bg {
-		/*-webkit-clip-path: url(#mask);
-		clip-path: url(#mask);
-		background-color: #000;*/
+		
 		display: block;
 		width: 1280px;
 		height: 720px;
@@ -100,7 +98,7 @@
 		animation: lhbg 2.8s ease-in 0s infinite;
 	}
 
-	.rayblk {
+	.clip-svg {
 		display: block;
 		width: 1280px;
 		height: 720px;
@@ -108,14 +106,14 @@
 		position: absolute;
 	}
 
-	.rayblk .ray01 {
+	.clip-svg .ray01 {
 		position: absolute;
 		width: 1280px;
 		height: 50%;
 		overflow: hidden;
 	}
 
-	.rayblk .ray02 {
+	.clip-svg .ray02 {
 		position: absolute;
 		width: 1280px;
 		top: 50%;
@@ -123,13 +121,13 @@
 		overflow: hidden;
 	}
 
-.rayblk span {
+.clip-svg span {
   position: absolute;
   background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.3) 50%,rgba(255,255,255,0) 70%);
   background: radial-gradient(ellipse at center, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.3) 50%,rgba(255,255,255,0) 70%);
 }
 
-.rayblk .ray01 span {
+.clip-svg .ray01 span {
   width: 580px;
   height: 830px;
   top:0;
@@ -137,7 +135,7 @@
   animation: aniray01 3300ms linear 300ms 1 infinite;
 }
 
-.rayblk .ray02 span {
+.clip-svg .ray02 span {
   width: 400px;
   height: 770px;
   top: -430px;
@@ -267,7 +265,7 @@
 		z-index: 1;
 	}
 
-	.loaing-wrap.error .rayblk {
+	.loaing-wrap.error .clip-svg {
 		display: none;
 	}
 
@@ -306,13 +304,14 @@
 <body>
 <div class="loaing-wrap">
 <div class="view">
-	<div class="rayblk">
+	<div class="clip-svg">
 	<div class="ray01"><span></span></div>
 	<div class="ray02"><span></span></div>
 	</div>
 	<div class="error-bg"></div>
 
 <div class="clip-bg"></div>
+
 <svg>
 <g>
 	<clipPath id="mask">
@@ -324,11 +323,19 @@
 		c0.197,0,0.362,0.003,0.493,0.006c0.08-0.004,0.255-0.007,0.468-0.007c3.904,0,17.569,1.048,29.472,14.528
 		c11.326,12.828,217.737,221.558,259,263.271l1.301,1.314c0.32,0.335,7.576,8.051,6.625,19.154
 		c-0.733,8.555-6.091,16.582-15.923,23.859c-18.107,13.401-26.314,19.329-29.929,21.893H1280V0H1064.605z 
-		"/>
+		M223.403,32.516c3.912,2.993,388.159,296.961,396.124,301.621c6.372,3.727,13.379,4.468,16.973,4.58v-0.018
+		h4.749v0.024c3.512-0.085,10.703-0.771,17.225-4.587c7.965-4.66,392.211-298.629,396.092-301.598
+		c0.542-0.386,12.49-9.158,7.021-32.31L1062.557,0h-2.054H217.495h-2.053l0.971,0.229C210.945,23.381,222.892,32.154,223.403,32.516
+		z 
+		M918.427,695.696c9.109-6.742,14.062-14.044,14.718-21.703c0.836-9.755-5.714-16.733-5.78-16.803
+		c-2.467-2.492-247.983-250.622-260.408-264.695c-11.487-13.013-25.104-13.521-27.516-13.506v0.01c-0.008-0.002-0.369,0-0.378,0
+		v-0.01c-2.412-0.017-16.029,0.495-27.516,13.506c-12.424,14.073-257.94,262.203-260.42,264.708
+		c-0.054,0.057-6.613,7.079-5.767,16.815c0.666,7.651,5.617,14.944,14.716,21.678c27.295,20.2,32.145,23.44,32.19,23.471
+		L391.714,720h1.198h492.676h1.2l-0.553-0.834C886.281,719.135,891.132,715.896,918.427,695.696z"/>
 	</clipPath>
 </g>
 </svg>
-<!-- <img src="img/launching-bg.png" class="bg-logo"> -->
+<img src="img/launching-bg.png" class="bg-logo">
 
 </div>
 <div class="loading-msg">
