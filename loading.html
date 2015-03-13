@@ -24,7 +24,6 @@
 		top: 0;
 		left: 0;
 		overflow: hidden;
-		transform: translate3d(0px, 0px, 0px);
 	}
 
 	.view {
@@ -33,7 +32,6 @@
 		overflow: hidden;
 		position: relative;
 		margin: auto;
-		transform: translate3d(0px, 0px, 0px);
 		/*background: -webkit-gradient(radial, center center, 0px, center center, 70%, color-stop(1%,#0b5b79), color-stop(70%,#000000));
 		background: -webkit-radial-gradient(center, ellipse cover,  #0b5b79 1%,#000000 70%);
 		-webkit-animation: lhbg 2.8s ease-in 0s infinite;
@@ -46,7 +44,6 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		transform: translate3d(0px, 0px, 0px);
 		content: '';
 		background: -webkit-gradient(radial, center center, 0px, center center, 70%, color-stop(1%,#0b5b79), color-stop(70%,#000000));
 		background: -webkit-radial-gradient(center, ellipse cover,  #0b5b79 1%,#000000 70%);
@@ -81,7 +78,6 @@
 		top: 0;
 		left: 0;
 		z-index: 1;
-		transform: translate3d(0px, 0px, 0px);
 	}
 
 	.clip-svg {
@@ -93,7 +89,6 @@
 		overflow: hidden;
 		position: absolute;
 		z-index: 2;
-		transform: translate3d(0px, 0px, 0px);
 	}
 
 	.clip-svg .ray01 {
@@ -101,7 +96,6 @@
 		width: 1280px;
 		height: 50%;
 		overflow: hidden;
-		transform: translate3d(0px, 0px, 0px);
 	}
 
 	.clip-svg .ray02 {
@@ -110,7 +104,6 @@
 		top: 50%;
 		height: 50%;
 		overflow: hidden;
-		transform: translate3d(0px, 0px, 0px);
 	}
 
 .clip-svg span {
@@ -123,7 +116,6 @@
   width: 580px;
   height: 830px;
   top:0;
-  transform: translate3d(0px, 0px, 0px);
   -webkit-animation: aniray01 3300ms linear 300ms infinite;
   animation: aniray01 3300ms linear 300ms 1 infinite;
 }
@@ -132,7 +124,6 @@
   width: 400px;
   height: 770px;
   top: -430px;
-  transform: translate3d(0px, 0px, 0px);
   -webkit-animation: aniray02 3300ms linear 300ms infinite; 
   animation: aniray02 3300ms linear 300ms 1 infinite;
 }
@@ -304,9 +295,9 @@
 	<div class="ray01"><span></span></div>
 	<div class="ray02"><span></span></div>
 </div>
-<svg style="transform: translate3d(0px, 0px, 0px);">
-<g style="transform: translate3d(0px, 0px, 0px);">
-	<clipPath id="mask" style="transform: translate3d(0px, 0px, 0px);">
+<svg>
+<g>
+	<clipPath id="mask">
 	<path d="M1063.533-0.23l-1.947,0.46c5.469,23.151-6.479,31.924-7.021,32.309
 			c-3.881,2.969-388.127,296.938-396.092,301.598c-6.521,3.816-13.713,4.502-17.224,4.587V338.7H636.5v0.017
 			c-3.594-0.112-10.601-0.853-16.973-4.58c-7.965-4.66-392.212-298.628-396.124-301.621c-0.511-0.362-12.458-9.135-6.989-32.286
@@ -326,7 +317,7 @@
 </svg>
 
 </div>
-<div class="loading-msg" style="transform: translate3d(0px, 0px, 0px);">
+<div class="loading-msg">
 	loading
 </div>
 </div>
