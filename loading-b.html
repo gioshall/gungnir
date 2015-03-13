@@ -69,16 +69,7 @@
 		z-index: 5;
 	}
 
-	.clip-bg {
-		
-		display: block;
-		width: 1280px;
-		height: 720px;
-		overflow: hidden;
-		position: absolute;
-	}
-
-	.clip-bg::after {
+	.clip-bbg, .clip-bg {
 		-webkit-clip-path: url(#mask);
 		clip-path: url(#mask);
 		display: block;
@@ -88,8 +79,16 @@
 		position: absolute;
 		z-index: 2;
 		top: 0;
-		left: 0;
-		content: '';
+		left: 0;		
+	}
+
+    .clip-bbg {
+		background: -webkit-gradient(radial, center center, 0px, center center, 70%, color-stop(1%,#000), color-stop(70%,#000000));
+		background: -webkit-radial-gradient(center, ellipse cover,  #000 1%,#000000 70%);
+		background: radial-gradient(ellipse at center,  #000 1%,#000000 70%);
+	}
+
+	.clip-bg {
 		background: -webkit-gradient(radial, center center, 0px, center center, 70%, color-stop(1%,#0b5b79), color-stop(70%,#000000));
 		background: -webkit-radial-gradient(center, ellipse cover,  #0b5b79 1%,#000000 70%);
 		background: radial-gradient(ellipse at center,  #0b5b79 1%,#000000 70%);
@@ -310,6 +309,7 @@
 	</div>
 	<div class="error-bg"></div>
 
+<div class="clip-bbg"></div>
 <div class="clip-bg"></div>
 
 <svg>
