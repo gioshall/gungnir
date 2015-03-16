@@ -17,7 +17,7 @@
 		background-color: rgba(0,0,0,0.5);
 	}
 
-	.loaing-wrap {
+	.loading-wrap {
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -42,7 +42,7 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		z-index: 5;
+		z-index: 4;
 	}
 
 	.clip-bbg, .clip-bg {
@@ -188,7 +188,7 @@
 		font-size: 50px;
 		letter-spacing: 1px;
 		font-weight: normal;
-		z-index: 10;
+		z-index: 5;
 		-webkit-animation: loading-text 1s linear infinite;
 		-moz-animation: loading-text 1s linear infinite;
 		animation: loading-text 1s linear infinite;
@@ -247,29 +247,46 @@
 
 /* error */
 
-	.loaing-wrap.error .view .error-bg {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background: -webkit-gradient(radial, center center, 0px, center center, 70%, color-stop(1%,#052d3c), color-stop(70%,#000000));
-		background: -webkit-radial-gradient(center, ellipse cover,  #052d3c 1%,#000000 70%);
-		opacity: 1;
-		transition: 0.3s;
-		-webkit-transition: 0.3s;
-		z-index: 1;
+	.loading-halo-error-mask {
+  		width: 100%;
+  		height: 100%;
+  		position: absolute;
+  		top: 0;
+  		left: 0;
+  		background: -webkit-gradient(radial, center center, 0px, center center, 70%, color-stop(1%,#052d3c), color-stop(70%,#000000));
+  		background: radial-gradient(ellipse at center,  #0b5b79 1%,#000000 70%);
+  		opacity: 0;
+  		-webkit-transition: opacity 1s ease 0;
+  		transition-property: opacity;
+  		transition-duration: 1s;
+  		transition-timing-function : ease;
+  		transition-delay: 0;
 	}
 
-	.loaing-wrap.error .clip-svg {
-		display: none;
+
+	.loading-wrap.error .view .clip-bg {
+		-webkit-animation-play-state: paused;
+		-moz-animation-play-state: paused;
+		animation-play-state: paused;
 	}
 
-	.loaing-wrap.error .loading-msg {
+	.loading-wrap.error .loading-halo-error-mask {
+		opacity:1;
+	}
+
+	.loading-wrap.error .clip-svg {
+		opacity: 0;
+	}
+
+	.loading-wrap.error .loading-msg {
 		-webkit-animation: none;
+		-moz-animation: none;
 		animation: none;
 	}
-	.loaing-wrap.error .loading-msg::before {
-		display: none;
+	.loading-wrap.error .loading-msg::before {
+  		display: none;
 	}
+
 
 
 
@@ -296,17 +313,16 @@
 	}
 </style>
 <body>
-<div class="loaing-wrap">
+<div class="loading-wrap">
 <div class="view">
 	<div class="clip-svg">
 	<div class="ray01"><span></span></div>
 	<div class="ray02"><span></span></div>
 	</div>
-	<div class="error-bg"></div>
 
 <div class="clip-bbg"></div>
 <div class="clip-bg"></div>
-
+<div class="loading-halo-error-mask"></div>
 <svg>
 <g>
 	<clipPath id="mask">
